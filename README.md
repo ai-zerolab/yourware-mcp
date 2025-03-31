@@ -1,10 +1,8 @@
 [![Release](https://img.shields.io/github/v/release/ai-zerolab/yourware-mcp)](https://img.shields.io/github/v/release/ai-zerolab/yourware-mcp)
 [![Build status](https://img.shields.io/github/actions/workflow/status/ai-zerolab/yourware-mcp/main.yml?branch=main)](https://github.com/ai-zerolab/yourware-mcp/actions/workflows/main.yml?query=branch%3Amain)
-
-<!-- [![codecov](https://codecov.io/gh/ai-zerolab/yourware-mcp/branch/main/graph/badge.svg)](https://codecov.io/gh/ai-zerolab/yourware-mcp) -->
-
 [![Commit activity](https://img.shields.io/github/commit-activity/m/ai-zerolab/yourware-mcp)](https://img.shields.io/github/commit-activity/m/ai-zerolab/yourware-mcp)
 [![License](https://img.shields.io/github/license/ai-zerolab/yourware-mcp)](https://img.shields.io/github/license/ai-zerolab/yourware-mcp)
+<!-- [![codecov](https://codecov.io/gh/ai-zerolab/yourware-mcp/branch/main/graph/badge.svg)](https://codecov.io/gh/ai-zerolab/yourware-mcp) -->
 
 # Yourware MCP
 
@@ -14,7 +12,7 @@ An mcp server to upload your project to [yourware](https://www.yourware.so). Sup
 
 Visit on [yourware](https://v9gfmmif5s.app.yourware.so/): https://v9gfmmif5s.app.yourware.so/
 
-![Showcase](./assets/showcase.png)
+![Showcase](./assets/showcase.jpeg)
 
 
 ## Pre-requisites
