@@ -47,7 +47,7 @@ In cursor settings -> features -> MCP Servers, Add a new MCP Server, name it `yo
 ### Config claude code
 
 ```bash
-claude mcp add yourware-mcp -s global -- uvx yourware-mcp@latest stdio
+claude mcp add yourware-mcp -s user -- uvx yourware-mcp@latest stdio
 ```
 
 ## Available environments variables
