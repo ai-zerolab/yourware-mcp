@@ -44,6 +44,12 @@ In cursor settings -> features -> MCP Servers, Add a new MCP Server, name it `yo
 
 ![Config cursor screenshot](./assets/config-cursor.png)
 
+### Config claude code
+
+```bash
+claude mcp add yourware-mcp -s global -- uvx yourware-mcp@latest stdio
+```
+
 ## Available environments variables
 
 `YOURWARE_API_KEY` for the API key, you can also let llm config it for you.
