@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yourware MCP - Upload Your Projects to Yourware</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #818cf8;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --card-bg: #f9fafb;
+            --border-color: #e5e7eb;
+            --code-bg: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 15px 0 0;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            color: var(--primary-color);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .installation-steps {
+            counter-reset: step;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .installation-steps li {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 50px;
+        }
+
+        .installation-steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Yourware MCP</h1>
+            <p>An MCP server to upload your projects to <a href="https://www.yourware.so" style="color: white; text-decoration: underline;">yourware.so</a></p>
+        </div>
+    </header>
+
+    <section id="overview">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p>
+                Yourware MCP is a Model Context Protocol (MCP) server that enables AI assistants like Claude to upload your projects directly to 
+                <a href="https://www.yourware.so">yourware.so</a>. This integration allows for seamless deployment of web projects, 
+                making it easy to showcase your work online without leaving your development environment.
+            </p>
+            <p>
+                Whether you're building a simple HTML page, a complex web application, or any other web-based project, 
+                Yourware MCP streamlines the process of getting your work online and shareable.
+            </p>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Features & Capabilities</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Easy Authentication</h3>
+                    <p>Simple API key-based authentication system that securely stores your credentials.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Flexible Uploads</h3>
+                    <p>Upload single files or entire directories with automatic compression and organization.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Seamless Deployment</h3>
+                    <p>One-step deployment process that makes your projects instantly available online.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>AI Assistant Integration</h3>
+                    <p>Works with AI assistants like Claude through Cline, Cursor, and Windsurf for a smooth workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="installation">
+        <div class="container">
+            <h2>Installation & Setup</h2>
+            <p>Getting started with Yourware MCP is straightforward:</p>
+            
+            <ol class="installation-steps">
+                <li>
+                    <strong>Install the package</strong>
+                    <pre>pip install yourware-mcp</pre>
+                    <p>Or use <code>uvx</code> directly as shown in the configuration examples below.</p>
+                </li>
+                <li>
+                    <strong>Configure your AI assistant</strong>
+                    <p>Add the Yourware MCP server to your AI assistant's configuration:</p>
+                    <h3>General Configuration</h3>
+                    <pre>{
+  "mcpServers": {
+    "yourware-mcp": {
+      "command": "uvx",
+      "args": ["yourware-mcp@latest", "stdio"],
+      "env": {}
+    }
+  }
+}</pre>
+                    <h3>Cursor Configuration</h3>
+                    <p>In Cursor settings → features → MCP Servers, add a new MCP Server named <code>yourware-mcp</code> and set the command to <code>uvx yourware-mcp@latest stdio</code></p>
+                    <img src="../assets/config-cursor.png" alt="Config cursor screenshot" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
+                </li>
+                <li>
+                    <strong>Create an API key</strong>
+                    <p>You can either:</p>
+                    <ul>
+                        <li>Let your AI assistant guide you through creating an API key</li>
+                        <li>Visit <a href="https://www.yourware.so/api/v1/api-keys/quick-create">https://www.yourware.so/api/v1/api-keys/quick-create</a> to create one manually</li>
+                        <li>Set the <code>YOURWARE_API_KEY</code> environment variable</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="usage">
+        <div class="container">
+            <h2>Usage Examples</h2>
+            <p>Once configured, you can use Yourware MCP through your AI assistant with the following tools:</p>
+
+            <h3>Check Credentials</h3>
+            <pre>
+// Check if your credentials exist and are valid
+await use_mcp_tool({
+  server_name: "yourware-mcp",
+  tool_name: "check_credentials",
+  arguments: {}
+});</pre>
+
+            <h3>Create API Key</h3>
+            <pre>
+// Create a new API key
+await use_mcp_tool({
+  server_name: "yourware-mcp",
+  tool_name: "create_api_key",
+  arguments: {
+    api_key: "your-api-key-here" // Optional, if not provided, will guide you to create one
+  }
+});</pre>
+
+            <h3>Upload Project</h3>
+            <pre>
+// Upload a file or directory to yourware
+await use_mcp_tool({
+  server_name: "yourware-mcp",
+  tool_name: "upload_project",
+  arguments: {
+    file_path: "path/to/your/project" // Can be a directory or single file
+  }
+});</pre>
+
+            <h3>Example Workflow</h3>
+            <p>A typical workflow might look like this:</p>
+            <ol>
+                <li>Build your web project</li>
+                <li>Check if your credentials are valid</li>
+                <li>If not, create a new API key</li>
+                <li>Upload your project to Yourware</li>
+                <li>Get the project URL and share it with others</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="container">
+            <h2>Resources & Links</h2>
+            <div class="resources">
+                <div class="resource-card">
+                    <h3>GitHub Repository</h3>
+                    <p>View the source code and contribute to the project.</p>
+                    <a href="https://github.com/ai-zerolab/yourware-mcp" class="btn">Visit GitHub</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Yourware Platform</h3>
+                    <p>Explore the Yourware platform and see examples.</p>
+                    <a href="https://www.yourware.so" class="btn">Visit Yourware</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Documentation</h3>
+                    <p>Read the full documentation for detailed information.</p>
+                    <a href="https://www.yourware.so/docs" class="btn">Read Docs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yourware MCP. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
