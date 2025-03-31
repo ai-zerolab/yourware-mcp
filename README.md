@@ -6,7 +6,7 @@
 
 # Yourware MCP
 
-An mcp server to upload your project to [yourware](https://www.yourware.so). Support single file or directory.
+MCP server to upload your project to [yourware](https://www.yourware.so). Support single file or directory.
 
 ## Showcase
 
