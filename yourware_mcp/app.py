@@ -70,7 +70,7 @@ async def upload_project(
         file_path = cwd_path / file_path
     else:
         file_path = Path(file_path)
-    
+
     file_path = file_path.expanduser().resolve()
 
     try:
