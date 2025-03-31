@@ -61,8 +61,17 @@ async def upload_project(
     file_path: Annotated[
         str, "The path to the dist/out directory or single file. If ends with /, it will be treated as a directory"
     ],
+    cwd: Annotated[
+        str | None, "The current working directory to resolve relative paths from, should be a absolute path"
+    ] = None,
 ):
-    file_path = Path(file_path).expanduser().resolve()
+    if cwd:
+        cwd_path = Path(cwd).expanduser().resolve()
+        file_path = cwd_path / file_path
+    else:
+        file_path = Path(file_path)
+    
+    file_path = file_path.expanduser().resolve()
 
     try:
         credentials = Credentials.load()
