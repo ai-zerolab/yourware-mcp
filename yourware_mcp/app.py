@@ -14,7 +14,7 @@ from yourware_mcp.utils import urljoin
 mcp = FastMCP("yourware-mcp")
 
 
-@mcp.tool(description="Check your credentials exists and are valid")
+@mcp.tool(description="Check your yourware credentials exists and are valid")
 async def check_credentials():
     try:
         credentials = Credentials.load()
@@ -38,7 +38,9 @@ async def check_credentials():
     }
 
 
-@mcp.tool(description=f"Create a new API key. This will automatically be stored in {CREDENTIALS_PATH.as_posix()}")
+@mcp.tool(
+    description=f"Create a new yourware API key. This will automatically be stored in {CREDENTIALS_PATH.as_posix()}. Use this tool if current credentials are invalid"
+)
 async def create_api_key(api_key: Annotated[str | None, "The API key to store"] = None):
     if not api_key:
         quick_create_address = urljoin(API_BASE_URL, "/api/v1/api-keys/quick-create")
@@ -56,13 +58,18 @@ async def create_api_key(api_key: Annotated[str | None, "The API key to store"] 
     }
 
 
-@mcp.tool(description="Upload a file or directory to yourware, should be a dist/out directory or html file")
+@mcp.tool(
+    description="Upload a file or directory to yourware, might be a dist/out directory or a single html file. Use absolute path if possible. "
+    "For multiple files, you should move them to a directory first, then use this tool to upload the directory"
+)
 async def upload_project(
     file_path: Annotated[
-        str, "The path to the dist/out directory or single file. If ends with /, it will be treated as a directory"
+        str,
+        "The path to the dist/out directory or single file. If ends with /, it will be treated as a directory",
     ],
     cwd: Annotated[
-        str | None, "The current working directory to resolve relative paths from, should be a absolute path"
+        str | None,
+        "The current working directory to resolve relative paths from, should be a absolute path",
     ] = None,
 ):
     if cwd:
@@ -113,7 +120,13 @@ async def upload_project(
     upload_response = await client.post(
         "/api/v1/files/upload",
         json={
-            "files": [{"file_name": "source_code.zip", "file_size": zip_size, "mime_type": "application/zip"}],
+            "files": [
+                {
+                    "file_name": "source_code.zip",
+                    "file_size": zip_size,
+                    "mime_type": "application/zip",
+                }
+            ],
             "event_type": "source_code",
             "is_public": False,
         },
