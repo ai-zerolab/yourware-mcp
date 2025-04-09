@@ -62,7 +62,7 @@ async def create_api_key(api_key: Annotated[str | None, "The API key to store"] 
     description="Upload a file or directory to yourware, might be a dist/out directory or a single html file. Use absolute path if possible. "
     "For multiple files, you should move them to a directory first, then use this tool to upload the directory"
 )
-async def upload_project(
+async def upload_project(  # noqa: C901
     file_path: Annotated[
         str,
         "The path to the dist/out directory or single file. If ends with /, it will be treated as a directory",
@@ -102,7 +102,11 @@ async def upload_project(
     with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zip_file:
         if file_path.is_dir():
             # 2. Zip the directory into it
-            for root, _, files in os.walk(file_path):
+            for root, dirs, files in os.walk(file_path):
+                # Skip .git directories
+                if ".git" in dirs:
+                    dirs.remove(".git")  # This modifies dirs in-place to prevent os.walk from traversing .git
+
                 for file in files:
                     file_full_path = Path(root) / file
                     arc_name = file_full_path.relative_to(file_path)
