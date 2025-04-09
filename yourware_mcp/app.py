@@ -14,7 +14,7 @@ from yourware_mcp.utils import urljoin
 mcp = FastMCP("yourware-mcp")
 
 
-@mcp.tool(description="Check your yourware credentials exists and are valid")
+@mcp.tool(description="Check your yourware credentials exists and are valid.")
 async def check_credentials():
     try:
         credentials = Credentials.load()
