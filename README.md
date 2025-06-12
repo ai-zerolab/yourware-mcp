@@ -9,6 +9,10 @@
 
 MCP server to upload your project to [yourware](https://www.yourware.so). Support single file or directory.
 
+<a href="https://glama.ai/mcp/servers/@ai-zerolab/yourware-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@ai-zerolab/yourware-mcp/badge" alt="Yourware MCP server" />
+</a>
+
 ## Showcase
 
 Visit on [yourware](https://v9gfmmif5s.app.yourware.so/): https://v9gfmmif5s.app.yourware.so/
