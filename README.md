@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/ai-zerolab-yourware-mcp-badge.png)](https://mseep.ai/app/ai-zerolab-yourware-mcp)
+
 [![Release](https://img.shields.io/github/v/release/ai-zerolab/yourware-mcp)](https://img.shields.io/github/v/release/ai-zerolab/yourware-mcp)
 [![Build status](https://img.shields.io/github/actions/workflow/status/ai-zerolab/yourware-mcp/main.yml?branch=main)](https://github.com/ai-zerolab/yourware-mcp/actions/workflows/main.yml?query=branch%3Amain)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/ai-zerolab/yourware-mcp)](https://img.shields.io/github/commit-activity/m/ai-zerolab/yourware-mcp)
